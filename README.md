@@ -5,7 +5,7 @@ initial a python project
 ## install:
   $ python setup.py install 
   
-## how to gain help:
+## how to get help:
   $ initproject -h
   
   usage: description=Create python project [-h] [-c] projectname
