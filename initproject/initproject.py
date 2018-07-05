@@ -2,7 +2,7 @@ import subprocess
 import argparse
 
 def startproject():
-	parse=argparse.ArgumentParser("description=Create pythom project")
+	parse=argparse.ArgumentParser("description=Create python project")
 	parse.add_argument("projectname",help="input your project name")
 	parse.add_argument('-c','--clean',action='store_true',help='clean your projectname information')
 
@@ -22,7 +22,7 @@ def createproject(projectname):
 	setup_file=projectpath+"/"+"setup.py"
 	req_file=projectpath+"/"+"requirements.txt"
 	readme_file=projectpath+"/"+"README.md"
-	
+
 	subprocess.call(["mkdir",projectpath])
 	subprocess.call(["touch",setup_file])
 	subprocess.call(["touch",req_file])
@@ -41,7 +41,7 @@ def createproject(projectname):
 	testpath=packetspath+"/"+"test"
 	subprocess.call(["mkdir",testpath])
 
-	
+
 def removeproject(projectname):
 	print("remove project")
 
@@ -50,6 +50,6 @@ def removeproject(projectname):
 		subprocess.call(["rm","-rf",projectname])
 	pass
 
-		
+
 if __name__ == '__main__':
 	startproject()
