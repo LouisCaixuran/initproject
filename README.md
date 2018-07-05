@@ -19,5 +19,5 @@ optional arguments:
   -c, --clean  clean your projectname information
   
  ## how to initial a new project called "abc":
-  initproject abc
+  $ initproject abc
   
