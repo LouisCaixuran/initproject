@@ -1,9 +1,8 @@
 # initproject
 initial a python project
 
-usage 
 
-## how to install:
+## install:
   $ python setup.py install 
   
 ## how to gain help:
