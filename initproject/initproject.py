@@ -1,5 +1,6 @@
 import subprocess
 import argparse
+import os
 
 def startproject():
 	parse=argparse.ArgumentParser("description=Create python project")
@@ -23,6 +24,13 @@ def createproject(projectname):
 	req_file=projectpath+"/"+"requirements.txt"
 	readme_file=projectpath+"/"+"README.md"
 
+	if os.path.exists(projectpath):
+		choice=raw_input("there is a file with name, do you want to replace it?(y/n)")
+		if choice=="y" :
+			subprocess.call(["rm", "-rf",projectpath])
+		else:
+			print("stop the initproject")
+			return
 	subprocess.call(["mkdir",projectpath])
 	subprocess.call(["touch",setup_file])
 	subprocess.call(["touch",req_file])
