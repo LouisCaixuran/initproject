@@ -1,0 +1,13 @@
+from setuptools import setup, find_packages
+
+setup(
+	name="",#name of the project
+	version="",#number of the version
+	author="",#author of the project
+	author_email="",#email used to connect the author
+	description="",#desvription of the project
+	url="",#the url os the github 
+	packages=find_packages(),
+	license="",#licence's name
+	platforms="",#plate form of this project
+)

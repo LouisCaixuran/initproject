@@ -1,6 +1,7 @@
 import subprocess
 import argparse
 import os
+import pkg_resources
 
 def startproject():
 	parse=argparse.ArgumentParser("description=Create python project")
@@ -9,16 +10,15 @@ def startproject():
 
 	args=parse.parse_args()
 
-	print args
+	print(args)
 	if args.clean:
-		removeproject(args.projectname)
+		removeproject(args.projectname.encode())
 	else:
-		createproject(args.projectname)
+		createproject(args.projectname.encode())
 
 def createproject(projectname):
 
-	curpath = subprocess.check_output(["pwd"]).replace('\n','')
-
+	curpath = os.getcwd()
 	projectpath=curpath+"/"+projectname
 	setup_file=projectpath+"/"+"setup.py"
 	req_file=projectpath+"/"+"requirements.txt"
@@ -32,7 +32,8 @@ def createproject(projectname):
 			print("stop the initproject")
 			return
 	subprocess.call(["mkdir",projectpath])
-	subprocess.call(["touch",setup_file])
+	sourcefile=pkg_resources.resource_filename("initproject","data/setup.txt")
+	subprocess.call(["cp",sourcefile,setup_file])
 	subprocess.call(["touch",req_file])
 	subprocess.call(["touch",readme_file])
 

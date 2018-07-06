@@ -1,4 +1,5 @@
 build/
 dist/
 initproject.egg-info/
-
+.DS_Store
+initproject/.DS_Store

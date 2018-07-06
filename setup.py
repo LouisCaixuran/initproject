@@ -10,10 +10,15 @@ setup(
 	packages=find_packages(),
 	license="Aparch",
 	platforms="Independant",
+	
+	package_data={
+		'initproject':['data/*.*'],
+	},
 
 	entry_points={
 		'console_scripts':[
 			'initproject = initproject.initproject:startproject',
 			]
+
 	}
 )
