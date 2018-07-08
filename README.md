@@ -6,9 +6,11 @@ initial a python project
   $ python setup.py install 
   
 ## how to get help:
-  $ initproject -h
+ ''' $ initpro -h
   
-Create python project [-h] [-c] projectname
+usage: initpro [-h] [-c] projectname
+
+Create python project
 
 positional arguments:
   projectname  input your project name
@@ -16,7 +18,24 @@ positional arguments:
 optional arguments:
   -h, --help   show this help message and exit
   -c, --clean  clean your projectname information
-  
+  '''
+
  ## how to initial a new project called "abc":
-  $ initproject abc
+ '''
+ $ initpro abc
+ $ tree abc
+
+abc
+├── README.md
+├── abc
+│   ├── _init_.py
+│   ├── main.py
+│   └── test
+├── docs
+├── requirements.txt
+└── setup.py
+
+3 directories, 5 files
+
+'''
   
