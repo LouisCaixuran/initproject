@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-	name="initproject",
+	name="initpro",
 	version="0.1",
 	author="purkol",
 	author_email="louiscaixuran@163.com",
@@ -12,12 +12,12 @@ setup(
 	platforms="Independant",
 	
 	package_data={
-		'initproject':['data/*.*'],
+		'initpro':['data/*.*'],
 	},
 
 	entry_points={
 		'console_scripts':[
-			'initproject = initproject.initproject:startproject',
+			'initpro = initpro.initpro:startproject',
 			]
 
 	}

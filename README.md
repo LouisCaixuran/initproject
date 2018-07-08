@@ -8,7 +8,7 @@ initial a python project
 ## how to get help:
   $ initproject -h
   
-  usage: description=Create python project [-h] [-c] projectname
+Create python project [-h] [-c] projectname
 
 positional arguments:
   projectname  input your project name

@@ -1,0 +1,3 @@
+[console_scripts]
+initpro = initpro.initpro:startproject
+
