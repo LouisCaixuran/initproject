@@ -4,7 +4,7 @@ import os
 import pkg_resources
 
 def startproject():
-	parse=argparse.ArgumentParser("description=Create python project")
+	parse=argparse.ArgumentParser(description="Create python project")
 	parse.add_argument("projectname",help="input your project name")
 	parse.add_argument('-c','--clean',action='store_true',help='clean your projectname information')
 
@@ -12,9 +12,9 @@ def startproject():
 
 	print(args)
 	if args.clean:
-		removeproject(args.projectname.encode())
+		removeproject(args.projectname)
 	else:
-		createproject(args.projectname.encode())
+		createproject(args.projectname)
 
 def createproject(projectname):
 
@@ -25,7 +25,8 @@ def createproject(projectname):
 	readme_file=projectpath+"/"+"README.md"
 
 	if os.path.exists(projectpath):
-		choice=raw_input("there is a file with name, do you want to replace it?(y/n)")
+		choice=input("there is a file with name, do you want to replace it?(y/n)")
+		y='y'
 		if choice=="y" :
 			subprocess.call(["rm", "-rf",projectpath])
 		else:
@@ -54,7 +55,9 @@ def createproject(projectname):
 def removeproject(projectname):
 	print("remove project")
 
-	action=raw_input("Are you sure to remove this project?(y/n):")
+	action=input("Are you sure to remove this project?(y/n):")
+	y='y'
+	Y='Y'
 	if action=="y" or action=="Y":
 		subprocess.call(["rm","-rf",projectname])
 	pass
