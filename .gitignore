@@ -1,5 +1,6 @@
 build/
 dist/
-initproject.egg-info/
+initpro.egg-info/
 .DS_Store
-initproject/.DS_Store
+initpro/.DS_Store
+initpro.egg-info/PKG-INFO
