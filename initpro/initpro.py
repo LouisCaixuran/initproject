@@ -26,14 +26,14 @@ def createproject(projectname):
 
 	if os.path.exists(projectpath):
 		choice=input("there is a file with name, do you want to replace it?(y/n)")
-		y='y'
-		if choice=="y" :
+		y="y"
+		if choice==y :
 			subprocess.call(["rm", "-rf",projectpath])
 		else:
 			print("stop the initproject")
 			return
 	subprocess.call(["mkdir",projectpath])
-	sourcefile=pkg_resources.resource_filename("initproject","data/setup.txt")
+	sourcefile=pkg_resources.resource_filename("initpro","data/setup.txt")
 	subprocess.call(["cp",sourcefile,setup_file])
 	subprocess.call(["touch",req_file])
 	subprocess.call(["touch",readme_file])
@@ -57,8 +57,7 @@ def removeproject(projectname):
 
 	action=input("Are you sure to remove this project?(y/n):")
 	y='y'
-	Y='Y'
-	if action=="y" or action=="Y":
+	if action==y:
 		subprocess.call(["rm","-rf",projectname])
 	pass
 
