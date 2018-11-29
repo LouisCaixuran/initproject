@@ -3,7 +3,10 @@ initial a python project
 
 
 ## install:
-  	$ python setup.py install 
+  	$ pip install initpro
+	or
+	$ git clone 
+	$ python setup.py install 
   
 ## how to get help:
 	$ initpro -h
