@@ -1,11 +1,11 @@
-# initproject
-initial a python project
+# initpro
+A tool for initial a python project
 
 
 ## install:
   	$ pip install initpro
 	or
-	$ git clone 
+	$ git clone https://github.com/LouisCaixuran/initproject.git
 	$ python setup.py install 
   
 ## how to get help:
